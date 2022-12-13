@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UploadComponent implements OnInit {
 
-  uploadedFiles: any[] = [];
+  uploadedFiles: any;
   disabled: Boolean = false;
 
-  name?: string; 
+  name: string;
+  
+  loading: boolean = false;
 
   ngOnInit(): void {
   }
@@ -29,9 +31,15 @@ export class UploadComponent implements OnInit {
     input.click();
 
     input.onchange = ( e: any ) => {
-      this.uploadedFiles.push( e.target.files[0] );
-      this.name = e.target.files[0].name;
-      console.log(this.uploadedFiles);
+      // this.uploadedFiles.push( e.target.files[0] );
+      this.uploadedFiles = e.target.files[0];
+      var fileName = e.target.files[0].name;
+      this.loading = true;
+      setTimeout( () => {
+        this.name = fileName;
+        this.loading = false;
+        console.log(this.uploadedFiles);
+      }, 1000 );
     };
 
     input.remove();

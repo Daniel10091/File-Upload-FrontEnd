@@ -1,1 +1,4 @@
-<pre>{{name}}</pre>
+<div class="container">
+  <div class="loader" [style]="loading ? 'display: inline-block;' : 'display: none;'"></div>
+  <pre>{{loading ? null : name}}</pre>
+</div>

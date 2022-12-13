@@ -8,6 +8,9 @@ import { Component, Input } from '@angular/core';
 export class FileComponent {
 
   @Input()
-  name?: string;
+  name: string;
+
+  @Input()
+  loading: boolean;
 
 }

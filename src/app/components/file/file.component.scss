@@ -1,4 +1,31 @@
-pre {
+.container {
+  position: relative;
   margin-inline: 20px;
-  
+  .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-top-color: rgba(255, 255, 255, 0.4);
+    animation: spin 1s linear infinite;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+  }
+  pre {
+    font-size: 14px;
+    color: #ffffff;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
