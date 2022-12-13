@@ -1,0 +1,19 @@
+.upload-button {
+  height: 40px;
+  padding-inline: 30px;
+  margin: 20px;
+  line-height: 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: rgb(240, 94, 245);
+  box-shadow: 0 0 0 0 rgba(240, 94, 245, 0.4);
+  border-radius: 6px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  will-change: contents;
+  transition: all 00.2s ease-in-out;
+  &:hover {
+    box-shadow: 0 0 0 0.2rem rgba(240, 94, 245, 0.4);
+  }
+}
